@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="3rd Annual Mokema Ave Block Party. Saturday, October 3, 2026 at 3:00 PM in front of 123 Mokema Ave, Waltham. Everyone on Mokema, Hibiscus and Seminole is invited.">
+<meta property="og:title" content="Mokema Block Party">
+<meta property="og:description" content="Saturday, October 3, 2026 at 3:00 PM. Potluck, games, and the whole neighborhood.">
+<meta property="og:image" content="logo.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+  :root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light dark}
+  html,body{margin:0}
+  img{max-width:100%}
+  [hidden]{display:none!important}
+</style>
+<title>Mokema Block Party</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400..600&display=swap">
+<style>
+  :root{
+    --ground:#EBF0F3;
+    --surface:#FFFFFF;
+    --surface-2:#F3F7F9;
+    --ink:#013044;
+    --ink-soft:#42606E;
+    --ink-faint:#7A95A2;
+    --line:#C9D8DF;
+    --accent:#FFBC66;
+    --accent-deep:#A5691D;
+    --accent-wash:#FFF2DE;
+    --sage:#2F7395;
+    --sage-wash:#E3EEF3;
+    --road:#D2DDE3;
+    --shadow:0 1px 2px rgba(1,48,68,.07), 0 8px 24px -12px rgba(1,48,68,.30);
+
+    --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+    --body:"Newsreader",Georgia,"Times New Roman",serif;
+    --mono:"DM Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#01202E;
+      --surface:#06303F;
+      --surface-2:#0B3B4D;
+      --ink:#E8F1F5;
+      --ink-soft:#9EBCC8;
+      --ink-faint:#6C8C9A;
+      --line:#16475B;
+      --accent:#FFBC66;
+      --accent-deep:#FFD49E;
+      --accent-wash:#3A2A10;
+      --sage:#6FA8C4;
+      --sage-wash:#0C2F3E;
+      --road:#123243;
+      --shadow:0 1px 2px rgba(0,0,0,.45), 0 10px 28px -14px rgba(0,0,0,.75);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#01202E;
+    --surface:#06303F;
+    --surface-2:#0B3B4D;
+    --ink:#E8F1F5;
+    --ink-soft:#9EBCC8;
+    --ink-faint:#6C8C9A;
+    --line:#16475B;
+    --accent:#FFBC66;
+    --accent-deep:#FFD49E;
+    --accent-wash:#3A2A10;
+    --sage:#6FA8C4;
+    --sage-wash:#0C2F3E;
+    --road:#123243;
+    --shadow:0 1px 2px rgba(0,0,0,.45), 0 10px 28px -14px rgba(0,0,0,.75);
+  }
+
+  *{box-sizing:border-box}
+  body{
+    background:var(--ground);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:17px;
+    line-height:1.6;
+    margin:0;
+    padding-inline:20px;
+    padding-block:0;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:680px;margin:0 auto;padding-block:48px 64px}
+
+  h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
+  p{margin:0}
+  a{color:var(--accent-deep)}
+
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    margin:0;
+  }
+
+  /* ---------- hero ---------- */
+  .hero{display:flex;flex-direction:column;gap:20px}
+  .hero .badge{
+    width:clamp(116px,27vw,164px);height:auto;align-self:flex-start;
+    margin-bottom:-6px;
+  }
+  .hero h1{
+    font-size:clamp(38px,9vw,64px);
+    line-height:1.02;
+    font-weight:800;
+    letter-spacing:-.02em;
+  }
+  .hero h1 .street-name{color:var(--accent-deep)}
+  .lede{font-size:19px;color:var(--ink-soft);max-width:34em}
+
+  .factline{
+    display:flex;flex-wrap:wrap;align-items:stretch;
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+  }
+  .fact{
+    background:var(--surface);
+    padding:14px 18px;
+    flex:1 1 150px;
+    display:flex;flex-direction:column;gap:3px;
+  }
+  .fact .k{
+    font-family:var(--mono);font-size:11px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--ink-faint);
+  }
+  .fact .v{font-family:var(--display);font-weight:600;font-size:19px;line-height:1.25}
+
+  /* ---------- countdown ---------- */
+  .countdown{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:10px;
+  }
+  .unit{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:14px 6px 10px;
+    text-align:center;
+  }
+  .unit .n{
+    font-family:var(--mono);font-variant-numeric:tabular-nums;
+    font-size:clamp(24px,7vw,34px);font-weight:500;line-height:1;
+    color:var(--ink);
+    display:block;
+  }
+  .unit .l{
+    font-family:var(--mono);font-size:10px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--ink-faint);margin-top:8px;display:block;
+  }
+  .cd-done{
+    background:var(--accent-wash);border:1px solid var(--accent);
+    border-radius:10px;padding:18px;text-align:center;
+    font-family:var(--display);font-weight:600;font-size:20px;
+  }
+
+  /* ---------- sections ---------- */
+  section{margin-top:44px;display:flex;flex-direction:column;gap:14px}
+  section h2{
+    font-size:13px;font-family:var(--mono);font-weight:500;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);
+    padding-bottom:10px;border-bottom:1px solid var(--line);
+  }
+
+  /* ---------- the block ---------- */
+  .block-scroll{overflow-x:auto;padding-block:4px}
+  .block{min-width:340px;display:flex;flex-direction:column;gap:0}
+  .houses{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+  .house{
+    background:var(--surface-2);
+    border:1px solid var(--line);
+    border-radius:6px 6px 3px 3px;
+    padding:16px 0 10px;
+    text-align:center;
+    font-family:var(--mono);font-size:12px;
+    color:var(--ink-faint);
+    position:relative;
+  }
+  .house.here{
+    background:var(--accent-wash);
+    border-color:var(--accent);
+    color:var(--accent-deep);
+    font-weight:500;
+  }
+  .here-flag{
+    position:absolute;left:50%;transform:translateX(-50%);
+    bottom:calc(100% + 7px);
+    white-space:nowrap;
+    font-family:var(--mono);font-size:10px;letter-spacing:.1em;
+    text-transform:uppercase;
+    background:var(--accent);color:#013044;
+    padding:3px 8px;border-radius:4px;
+  }
+  .here-flag::after{
+    content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);
+    border:4px solid transparent;border-top-color:var(--accent);
+  }
+  .road{
+    background:var(--road);
+    margin:10px 0;
+    height:34px;border-radius:3px;
+    display:flex;align-items:center;justify-content:center;
+    position:relative;
+  }
+  .road::before{
+    content:"";position:absolute;left:8px;right:8px;top:50%;
+    height:2px;transform:translateY(-50%);
+    background:repeating-linear-gradient(to right,var(--ink-faint) 0 14px,transparent 14px 28px);
+    opacity:.5;
+  }
+  .road span{
+    position:relative;
+    background:var(--road);padding:0 10px;
+    font-family:var(--mono);font-size:10px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--ink-soft);
+  }
+  .block-note{font-size:15px;color:var(--ink-soft);margin-top:10px}
+
+  /* ---------- bring list ---------- */
+  .bring{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+  .bring li{
+    list-style:none;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-left:3px solid var(--sage);
+    border-radius:0 8px 8px 0;
+    padding:14px 16px;
+    display:flex;flex-direction:column;gap:3px;
+  }
+  .bring{margin:0;padding:0}
+  .bring .t{font-family:var(--display);font-weight:600;font-size:16px}
+  .bring .d{font-size:15px;color:var(--ink-soft);line-height:1.45}
+
+  /* ---------- dish categories ---------- */
+  .dishes{display:flex;flex-direction:column;gap:1px;background:var(--line);
+    border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:var(--shadow)}
+  .dish{background:var(--surface);padding:14px 16px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+  .dish .cat{font-family:var(--display);font-weight:600;font-size:17px;flex:0 0 auto}
+  .dish .ex{font-size:15px;color:var(--ink-soft);flex:1 1 180px;line-height:1.4}
+  .dish .need{
+    font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+    background:var(--sage-wash);color:var(--sage);border:1px solid var(--sage);
+    padding:3px 8px;border-radius:999px;flex:0 0 auto;white-space:nowrap;
+  }
+  .dish.drinks .need{background:var(--accent-wash);color:var(--accent-deep);border-color:var(--accent)}
+
+  /* ---------- rsvp ---------- */
+  .rsvp{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:24px;
+    box-shadow:var(--shadow);
+    display:flex;flex-direction:column;gap:12px;
+    align-items:flex-start;
+  }
+  .rsvp h3{font-size:22px;font-weight:700}
+  .rsvp p{color:var(--ink-soft);font-size:16px}
+  .btn{
+    display:inline-block;
+    font-family:var(--display);font-weight:600;font-size:16px;
+    background:var(--accent);color:#013044;
+    padding:12px 22px;border-radius:8px;
+    text-decoration:none;border:1px solid var(--accent-deep);
+  }
+  .btn:hover{background:var(--accent-deep);color:#fff}
+  .btn:focus-visible{outline:3px solid var(--sage);outline-offset:2px}
+  .btn[aria-disabled="true"]{
+    background:var(--surface-2);color:var(--ink-faint);
+    border-color:var(--line);cursor:default;
+  }
+  .btn[aria-disabled="true"]:hover{background:var(--surface-2);color:var(--ink-faint)}
+  .btn-ghost{
+    background:transparent;color:var(--ink);border:1px solid var(--line);
+    display:inline-block;font-family:var(--display);font-weight:600;font-size:15px;
+    padding:10px 18px;border-radius:8px;text-decoration:none;
+  }
+  .btn-ghost:hover{background:var(--surface-2);border-color:var(--ink-faint)}
+  .btn-ghost:focus-visible{outline:3px solid var(--sage);outline-offset:2px}
+  .mapwrap{
+    position:relative;border:1px solid var(--line);border-radius:10px;
+    overflow:hidden;box-shadow:var(--shadow);line-height:0;background:#fff;
+  }
+  .mapwrap img{display:block;width:100%;height:auto}
+  .mapmark{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) .mapwrap img{filter:brightness(.88) contrast(1.03)}
+  }
+  :root[data-theme="dark"] .mapwrap img{filter:brightness(.88) contrast(1.03)}
+  figure.mapfig{margin:0;display:flex;flex-direction:column;gap:10px}
+  figure.mapfig figcaption{font-size:15px;color:var(--ink-soft);line-height:1.5}
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+  .gallery figure{margin:0;display:flex;flex-direction:column;gap:8px}
+  .gallery img{
+    display:block;width:100%;height:auto;border-radius:10px;
+    border:1px solid var(--line);box-shadow:var(--shadow);
+  }
+  .gallery figcaption{font-size:14px;color:var(--ink-faint);line-height:1.45}
+  /* ---------- hosts ---------- */
+  .hosts{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+  .host{
+    background:var(--surface);border:1px solid var(--line);border-radius:10px;
+    padding:16px;display:flex;flex-direction:column;gap:6px;
+  }
+  .host .n{font-family:var(--display);font-weight:600;font-size:17px;line-height:1.3}
+  .host .a{
+    font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--ink-faint);
+  }
+  .host .new{
+    align-self:flex-start;margin-top:2px;
+    font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+    background:var(--accent-wash);color:var(--accent-deep);
+    border:1px solid var(--accent);border-radius:999px;padding:2px 8px;
+  }
+  .invite{
+    background:var(--sage-wash);border:1px solid var(--sage);
+    border-radius:10px;padding:14px 18px;
+    font-family:var(--display);font-weight:600;font-size:17px;color:var(--ink);
+  }
+
+  .todo{
+    font-family:var(--mono);font-size:12px;line-height:1.5;
+    color:var(--ink-soft);
+    background:var(--sage-wash);
+    border:1px dashed var(--sage);
+    border-radius:8px;padding:12px 14px;
+  }
+  .todo b{color:var(--sage);font-weight:500}
+
+  footer{
+    margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
+    font-family:var(--mono);font-size:12px;color:var(--ink-faint);
+    display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:space-between;
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+  }
+  @media (max-width:420px){
+    .countdown{grid-template-columns:repeat(2,1fr)}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <img class="badge" src="logo.png" alt="Mokema Block Party seal: two houses and four neighbours ringed by the words 3rd Annual Mokema Block Party.">
+    <p class="eyebrow">3rd Annual &middot; Saturday, October 3, 2026</p>
+    <h1>Mokema Ave<br><span class="street-name">Block Party</span></h1>
+    <p class="lede">Potluck, cold drinks, games in the street, and the one afternoon a year the whole neighborhood is out at the same time. Kids, dogs, and the neighbor you’ve been meaning to introduce yourself to.</p>
+    <p class="invite">Everyone on Mokema, Hibiscus, and Seminole is invited, not just our block. Bring your neighbors.</p>
+    <p class="lede" style="font-size:17px">If it rains, we’ll move to Sunday, October 4 at the same time and the same spot.</p>
+
+    <div class="factline">
+      <div class="fact"><span class="k">When</span><span class="v">Sat, Oct 3</span></div>
+      <div class="fact"><span class="k">Time</span><span class="v">3:00 PM</span></div>
+      <div class="fact"><span class="k">Where</span><span class="v">In front of 123</span></div>
+      <div class="fact"><span class="k">Rain date</span><span class="v">Sun, Oct 4</span></div>
+    </div>
+  </header>
+
+  <section aria-label="Countdown">
+    <h2>Countdown</h2>
+    <div class="countdown" id="cd">
+      <div class="unit"><span class="n" id="cd-d">--</span><span class="l">Days</span></div>
+      <div class="unit"><span class="n" id="cd-h">--</span><span class="l">Hours</span></div>
+      <div class="unit"><span class="n" id="cd-m">--</span><span class="l">Min</span></div>
+      <div class="unit"><span class="n" id="cd-s">--</span><span class="l">Sec</span></div>
+    </div>
+    <div class="cd-done" id="cd-done" hidden>It’s happening right now. Come outside.</div>
+  </section>
+
+  <section>
+    <h2>Where to find us</h2>
+    <figure class="mapfig">
+      <div class="mapwrap">
+        <img src="map.png" alt="Street map of Mokema Avenue in Waltham, Massachusetts, running between Hibiscus Avenue to the west and Seminole Avenue to the east, with the block party location circled at 123 Mokema Ave near the north end of the street.">
+        <svg class="mapmark" viewBox="0 0 992 700" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <circle cx="524" cy="235" r="116" fill="none" stroke="#FFFFFF" stroke-width="14" opacity="0.9"></circle>
+          <circle cx="524" cy="235" r="116" fill="none" stroke="#013044" stroke-width="6"></circle>
+          <line x1="524" y1="95" x2="524" y2="119" stroke="#FFFFFF" stroke-width="10" opacity="0.9"></line>
+          <line x1="524" y1="95" x2="524" y2="119" stroke="#013044" stroke-width="5"></line>
+          <rect x="265" y="47" width="518" height="50" rx="25" fill="#FFBC66" stroke="#013044" stroke-width="3"></rect>
+          <text x="524" y="80" text-anchor="middle" font-family="Bricolage Grotesque, Trebuchet MS, sans-serif" font-size="27" font-weight="700" letter-spacing="1.2" fill="#013044">PARTY HERE &#183; 123 MOKEMA AVE</text>
+        </svg>
+      </div>
+      <figcaption>Mokema Ave runs between Hibiscus Ave and Seminole Ave. The party is at the north end of the block, in front of 123.</figcaption>
+    </figure>
+    <p class="block-note">Tables go up in the street in front of <strong>123 Mokema Ave, Waltham</strong>. If you’re coming from Hibiscus or Seminole, head for the north end of Mokema. You’ll hear us.</p>
+    <p><a class="btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=123+Mokema+Ave+Waltham+MA+02451" target="_blank" rel="noopener">Open in Google Maps</a></p>
+  </section>
+
+  <section>
+    <h2>What to bring</h2>
+    <p class="lede" style="font-size:17px">Check everything you can bring when you RSVP. You can choose more than one. That way we don’t end up with nine pasta salads, no dessert, and nothing to eat them off. These are the numbers we’re aiming for with three streets invited, so grab whatever’s short.</p>
+    <div class="dishes">
+      <div class="dish"><span class="cat">Mains</span><span class="ex">Something off a grill, a big pan of something, a tray of sandwiches.</span><span class="need">Aiming for 5</span></div>
+      <div class="dish"><span class="cat">Sides &amp; salads</span><span class="ex">Pasta salad, slaw, roasted vegetables, a bread basket.</span><span class="need">Aiming for 6</span></div>
+      <div class="dish"><span class="cat">Apps &amp; snacks</span><span class="ex">Dips, chips, cheese, anything the kids will eat standing up.</span><span class="need">Aiming for 4</span></div>
+      <div class="dish"><span class="cat">Dessert</span><span class="ex">Pie, cookies, brownies, whatever your neighbors always ask you to bring.</span><span class="need">Aiming for 5</span></div>
+      <div class="dish drinks"><span class="cat">Drinks &amp; ice</span><span class="ex">Seltzer, juice boxes, lemonade, and ice. Bring more ice than you think you need. We run out of it every year.</span><span class="need">Aiming for 7</span></div>
+      <div class="dish"><span class="cat">Paper goods</span><span class="ex">Cups, plates, napkins, silverware. Not glamorous, but we can’t do it without them.</span><span class="need">Aiming for 4</span></div>
+      <div class="dish"><span class="cat">Games</span><span class="ex">Cornhole, soccer ball, giant Jenga, chalk, kids&rsquo; mini cars, jump rope.</span><span class="need">Aiming for 6</span></div>
+    </div>
+    <p class="block-note">Please label anything with nuts or dairy. A few people on the block have allergies. And don’t forget a serving spoon.</p>
+  </section>
+
+  <section>
+    <h2>Also bring</h2>
+    <ul class="bring">
+      <li><span class="t">A chair</span><span class="d">There are never enough. Bring your own and you’re guaranteed a seat.</span></li>
+      <li><span class="t">A layer</span><span class="d">It’s early October. Once the sun drops behind the houses it gets cold fast.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Last year</h2>
+    <div class="gallery">
+      <figure>
+        <img src="photo2.jpg" loading="lazy" alt="Pop-up canopies, folding chairs and food tables set up across the street, with neighbours standing and talking and small children playing nearby.">
+        <figcaption>Previous block party!</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>RSVP</h2>
+    <div class="rsvp">
+      <h3>Tell us you are coming</h3>
+      <p>It takes a minute. Tell us how many are coming, what you can bring, and leave a phone number and email so we can reach you about this year and next.</p>
+      <a class="btn" href="https://forms.gle/rxkFUXTmpmzyQkNg7" target="_blank" rel="noopener" id="rsvp-btn">RSVP &amp; pick your dish</a>
+      <p style="font-size:14px;color:var(--ink-faint)">We’ll only use your number and email for block stuff: party details, a rain call, the occasional heads up about the street. Nothing else, and we won’t share it with anyone.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Your hosts</h2>
+    <p class="lede" style="font-size:17px">Three families on Mokema who wanted to get to know their neighbors better. That’s the whole reason this exists.</p>
+    <div class="hosts">
+      <div class="host">
+        <span class="n">Matt, John, Gianna &amp; Matteo</span>
+        <span class="a">123 Mokema</span>
+      </div>
+      <div class="host">
+        <span class="n">Annie, Jon, Sarah, Adam &amp; Nessa the dog</span>
+        <span class="a">85 Mokema</span>
+      </div>
+      <div class="host">
+        <span class="n">Ian, Melissa &amp; baby Nora</span>
+        <span class="a">113 Mokema</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Questions</h2>
+    <p>Knock on any of our doors, or leave a note at <strong>85 Mokema</strong> or <strong>123 Mokema</strong>. You can also leave it in the comments box at the end of the RSVP form. We read all of them.</p>
+  </section>
+
+  <footer>
+    <span>Mokema Ave Block Party &middot; Waltham, MA</span>
+    <span>October 3, 2026</span>
+  </footer>
+
+</div>
+
+<script>
+  (function(){
+    var target = Date.UTC(2026, 9, 3, 19, 0, 0); // Oct 3 2026, 3:00 PM EDT
+    var grid = document.getElementById('cd');
+    var done = document.getElementById('cd-done');
+    var el = {
+      d: document.getElementById('cd-d'),
+      h: document.getElementById('cd-h'),
+      m: document.getElementById('cd-m'),
+      s: document.getElementById('cd-s')
+    };
+    function pad(n){ return n < 10 ? '0' + n : String(n); }
+    function tick(){
+      var diff = target - Date.now();
+      if (diff <= 0){
+        grid.hidden = true;
+        done.hidden = false;
+        return false;
+      }
+      var t = Math.floor(diff / 1000);
+      el.d.textContent = Math.floor(t / 86400);
+      el.h.textContent = pad(Math.floor((t % 86400) / 3600));
+      el.m.textContent = pad(Math.floor((t % 3600) / 60));
+      el.s.textContent = pad(t % 60);
+      return true;
+    }
+    if (tick()){
+      var id = setInterval(function(){ if (!tick()) clearInterval(id); }, 1000);
+    }
+  })();
+</script>
+</body>
+</html>
